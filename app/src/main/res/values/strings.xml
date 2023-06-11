@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">SaludDigital</string>
+
+    <string name="registra_tu_peso">Registra tu peso</string>
+    <string name="fecha_de_registro">Fecha de Registro</string>
+    <string name="tu_peso">Tu Peso</string>
+    <string name="unidad_de_medida">Unidad de medida</string>
+    <string name="control_de_peso_corporal">Control de peso corporal</string>
+    <string name="grafica">Grafica</string>
+    <string name="mira_el_grafico_de_tu_progres">Mira el grafico de tu progres</string>
+    <string name="disponible">Disponible</string>
+
 </resources>
