@@ -12,7 +12,6 @@ import java.util.List;
 import fia.ues.saluddigital.R;
 
 public class ViewPager extends AppCompatActivity {
-
     private ImageView iv1;
     private ImageView iv2;
     private ImageView iv3;
@@ -77,5 +76,6 @@ public class ViewPager extends AppCompatActivity {
                 iv3.setBackgroundColor(getResources().getColor(R.color.teal_200));
                 break;
         }
+
     }
 }

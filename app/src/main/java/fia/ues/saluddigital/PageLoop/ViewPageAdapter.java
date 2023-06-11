@@ -4,6 +4,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -26,6 +27,7 @@ public class ViewPageAdapter extends RecyclerView.Adapter<ViewPageAdapter.ViewPa
     private List<Integer> image;
 
     public ViewPageAdapter(List<Integer> image) {
+
         this.image = image;
     }
 
@@ -48,13 +50,10 @@ public class ViewPageAdapter extends RecyclerView.Adapter<ViewPageAdapter.ViewPa
     public void onBindViewHolder(@NonNull ViewPageAdapter.ViewPagerHolder holder, int position) {
         Integer curImage = image.get(position);
         holder.imageView.setImageResource(curImage);
-
     }
 
     @Override
     public int getItemCount() {
         return image.size();
     }
-
-
 }
