@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:gravity="center"
     android:padding="20dp"
     tools:context=".GestionPeso.GestionPesoMenu">
 
@@ -20,7 +21,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/listRecicleView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content" />
 
 
 
