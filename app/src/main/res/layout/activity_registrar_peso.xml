@@ -21,7 +21,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:labelFor="@+id/editFecha"
         android:text="@string/fecha_de_registro" />
+
+    <EditText
+        android:id="@+id/editFecha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:inputType="date"
+        android:minHeight="48dp"
+        tools:ignore="LabelFor,VisualLintTextFieldSize" />
 
     <TextView
         android:layout_width="match_parent"
@@ -43,9 +53,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
+        android:labelFor="@+id/editUMedida"
         android:text="@string/unidad_de_medida" />
 
-
+    <EditText
+        android:id="@+id/editUMedida"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:inputType="text"
+        android:minHeight="48dp"
+        tools:ignore="VisualLintTextFieldSize" />
+    <Button
+        android:id="@+id/btnRegistrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="@string/registar"
+        tools:ignore="VisualLintButtonSize" />
 
 
 </LinearLayout>
