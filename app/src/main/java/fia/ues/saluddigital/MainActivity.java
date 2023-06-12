@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
+import fia.ues.saluddigital.Autenticacion.GoogleSignInModulo;
 import fia.ues.saluddigital.GestionPeso.GestionPesoMenu;
 
 public class MainActivity extends AppCompatActivity {

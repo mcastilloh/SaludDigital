@@ -15,6 +15,9 @@
         android:theme="@style/Theme.SaludDigital"
         tools:targetApi="31">
         <activity
+            android:name=".Autenticacion.GoogleSignInModulo"
+            android:exported="false" />
+        <activity
             android:name=".GestionPeso.GraficosPeso"
             android:exported="false" />
         <activity

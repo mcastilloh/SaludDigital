@@ -11,6 +11,7 @@
     <string name="disponible">Disponible</string>
     <string name="registar">Registar</string>
     <string name="grafico_control_de_peso_corporal">Grafico control de peso corporal</string>
+    <string name="web_client_id">61093009197-90mo2j447p8slds4ess37v0rk9d9upae.apps.googleusercontent.com</string>
 
     <string-array name="unidades_medida_peso">
         <item>Kilogramos</item>

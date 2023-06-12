@@ -87,10 +87,16 @@ public class RegistrarPeso extends AppCompatActivity {
 
                 // Mostrar un mensaje de éxito
                 Toast.makeText(RegistrarPeso.this, "Registro de peso exitoso", Toast.LENGTH_SHORT).show();
+                clearText();
 
             }
         });
 
+    }
+
+    private void clearText(){
+        editFecha.setText("");
+        editPeso.setText("");
     }
 
 }
