@@ -13,6 +13,11 @@
     <string name="foto_perfil">Subir foto de perfil</string>
     <string name="btn_mapas">Ver mapas</string>
     <string name="btnRecetas">Ver recetas</string>
+
+    <string name="ejercicios">Rutina de ejercicios</string>
+    <string name="video">Videos de ejercicios</string>
+    <string name="btn_ejercicio">Rutina de ejercicios</string>
+
     <string name="app_name">SaludDigital</string>
 
     <string name="registra_tu_peso">Registra tu peso</string>
@@ -32,6 +37,7 @@
         <item>Libras</item>
         <item>Onzas</item>
     </string-array>
+
 
 
 </resources>
