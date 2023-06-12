@@ -41,8 +41,10 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
 
+import fia.ues.saluddigital.Autenticacion.GoogleSignInModulo;
 import fia.ues.saluddigital.BD_Control.BD_Control;
 import fia.ues.saluddigital.MainActivity;
+import fia.ues.saluddigital.Menu_principal;
 import fia.ues.saluddigital.R;
 
 public class RegistroUsuario extends AppCompatActivity {
@@ -51,7 +53,7 @@ public class RegistroUsuario extends AppCompatActivity {
     EditText txtUsuario, txtContrasenia;
     int id = 0;
     String path = "";
-    Button btn_cargar_img, btn_crear_usuario;
+    Button btn_cargar_img, btn_crear_usuario,btn_google;
     private static final int REQUES_PERMISSION_CAMERA = 100;
     private static final int TAKE_PICTURE = 100;
     private static final int REQUEST_PERMISSION_WRITE_STORAGE = 100;
@@ -87,6 +89,14 @@ public class RegistroUsuario extends AppCompatActivity {
                // crearUsuario();
                 //Regresar();
 
+            }
+        });
+        btn_google = findViewById(R.id.btn_googlelogin);
+        btn_google.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent recetas = new Intent(RegistroUsuario.this, GoogleSignInModulo.class);
+                startActivity(recetas);
             }
         });
     }

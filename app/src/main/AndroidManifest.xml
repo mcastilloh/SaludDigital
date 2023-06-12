@@ -55,6 +55,10 @@
             android:name=".GestionPeso.RegistrarPeso"
             android:exported="false" />
         <activity
+            android:name=".RutinaEjercicios.EjercicioVideo"
+            android:exported="false"
+            android:label="Ejercicio Video" />
+        <activity
             android:name=".MainActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.NoActionBar">
