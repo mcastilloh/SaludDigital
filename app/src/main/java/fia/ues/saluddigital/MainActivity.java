@@ -13,6 +13,9 @@ import fia.ues.saluddigital.BD_Control.BD_Control;
 import fia.ues.saluddigital.Usuario.RegistroUsuario;
 import fia.ues.saluddigital.Usuario.Usuario;
 
+import fia.ues.saluddigital.Autenticacion.GoogleSignInModulo;
+import fia.ues.saluddigital.GestionPeso.GestionPesoMenu;
+
 public class MainActivity extends AppCompatActivity {
 
     Button btn_reg_us;
@@ -55,5 +58,12 @@ public class MainActivity extends AppCompatActivity {
     public void llenarDatos(){
         Usuario usuario = new Usuario(0,"a","a");
         bdControl.insertar(usuario);
+
+        try {
+            Intent intent = new Intent(MainActivity.this, GestionPesoMenu.class);
+            startActivity(intent);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

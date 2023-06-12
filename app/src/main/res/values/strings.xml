@@ -13,9 +13,31 @@
     <string name="foto_perfil">Subir foto de perfil</string>
     <string name="btn_mapas">Ver mapas</string>
     <string name="btnRecetas">Ver recetas</string>
+
     <string name="ejercicios">Rutina de ejercicios</string>
     <string name="video">Videos de ejercicios</string>
     <string name="btn_ejercicio">Rutina de ejercicios</string>
+
+    <string name="app_name">SaludDigital</string>
+
+    <string name="registra_tu_peso">Registra tu peso</string>
+    <string name="fecha_de_registro">Fecha de Registro</string>
+    <string name="tu_peso">Tu Peso</string>
+    <string name="unidad_de_medida">Unidad de medida</string>
+    <string name="control_de_peso_corporal">Control de peso corporal</string>
+    <string name="grafica">Grafica</string>
+    <string name="mira_el_grafico_de_tu_progres">Mira el grafico de tu progres</string>
+    <string name="disponible">Disponible</string>
+    <string name="registar">Registar</string>
+    <string name="grafico_control_de_peso_corporal">Grafico control de peso corporal</string>
+    <string name="web_client_id">61093009197-90mo2j447p8slds4ess37v0rk9d9upae.apps.googleusercontent.com</string>
+
+    <string-array name="unidades_medida_peso">
+        <item>Kilogramos</item>
+        <item>Libras</item>
+        <item>Onzas</item>
+    </string-array>
+
 
 
 </resources>
