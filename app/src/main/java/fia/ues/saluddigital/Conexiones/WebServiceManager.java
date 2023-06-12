@@ -5,17 +5,10 @@ import android.content.Context;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonArrayRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONArray;
-import org.json.JSONObject;
-
-import java.util.HashMap;
-import java.util.Map;
+import fia.ues.saluddigital.GestionPeso.RecordPeso;
 
 public class WebServiceManager {
     private static WebServiceManager instance;
@@ -44,4 +37,13 @@ public class WebServiceManager {
     public <T> void addToRequestQueue(Request<T> req) {
         getRequestQueue().add(req);
     }
+
+    public void registrarPeso(RecordPeso infoPeso, Response.Listener<String> responseListener, Response.ErrorListener errorListener){
+        String url = "https://gg20013pdm115.000webhostapp.com/registrar_peso.php";
+
+        StringRequest request = new StringRequest(Request.Method.GET, url + "?fecha=" + infoPeso.getFecha() + "&peso=" + infoPeso.getPeso() + "&unidad=" + infoPeso.getUnidad(), responseListener, errorListener);
+
+        addToRequestQueue(request);
+    }
+
 }

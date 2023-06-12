@@ -7,19 +7,19 @@ import java.util.Date;
 
 public class RecordPeso {
 
-    private Date fecha;
+    private String fecha;
     private double peso;
     private String unidad;
 
     public RecordPeso() {
     }
 
-    public Date getFecha() {
+    public String getFecha() {
         return fecha;
     }
 
     public void setFecha(String fecha) {
-        this.fecha = parseFecha(fecha);
+        this.fecha = fecha;
     }
 
     public double getPeso() {
@@ -36,15 +36,5 @@ public class RecordPeso {
 
     public void setUnidad(String unidad) {
         this.unidad = unidad;
-    }
-
-    private Date parseFecha(String fecha) {
-        try {
-            DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-            return dateFormat.parse(fecha);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return null;
     }
 }

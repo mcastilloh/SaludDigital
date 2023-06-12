@@ -10,5 +10,13 @@
     <string name="mira_el_grafico_de_tu_progres">Mira el grafico de tu progres</string>
     <string name="disponible">Disponible</string>
     <string name="registar">Registar</string>
+    <string name="grafico_control_de_peso_corporal">Grafico control de peso corporal</string>
+
+    <string-array name="unidades_medida_peso">
+        <item>Kilogramos</item>
+        <item>Libras</item>
+        <item>Onzas</item>
+    </string-array>
+
 
 </resources>
