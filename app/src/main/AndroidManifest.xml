@@ -33,6 +33,7 @@
         <activity
             android:name=".Mapa.MapsActivity"
             android:exported="false" />
+        <activity
             android:name=".Menu_principal"
             android:exported="false" />
         <activity
