@@ -8,7 +8,6 @@ import fia.ues.saluddigital.Conexiones.ConexionSQLite;
 import fia.ues.saluddigital.Conexiones.WebServiceManager;
 import fia.ues.saluddigital.R;
 
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Spinner;
@@ -91,7 +90,6 @@ public class RegistrarPeso extends AppCompatActivity {
 
             }
         });
-
     }
 
     private void clearText(){
