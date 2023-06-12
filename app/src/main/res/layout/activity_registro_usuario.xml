@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Usuario.RegistroUsuario">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -13,80 +13,74 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/reg_usuarios"
+                android:textAlignment="center"
+                android:textSize="30dp"></TextView>
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/fotPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="136dp"
+            app:srcCompat="@mipmap/user"
+            tools:layout_editor_absoluteX="172dp"
+            tools:layout_editor_absoluteY="50dp" />
+
+        <Button
+            android:id="@+id/btn_foto_perfil"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TableLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TableRow android:gravity="center">
-
-                    <ImageView
-                        android:id="@+id/imageView"
-                        android:layout_width="142dp"
-                        android:layout_height="wrap_content"
-                        app:srcCompat="@mipmap/logo"
-                        tools:layout_editor_absoluteX="172dp"
-                        tools:layout_editor_absoluteY="50dp" />
-
-                    <TextView
-                        android:layout_width="192dp"
-                        android:layout_height="match_parent"
-                        android:text="@string/app_name"
-                        android:textSize="40dp"></TextView>
-                </TableRow>
-            </TableLayout>
-
-
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/foto_perfil"></Button>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:height="25dp"
-                android:text="@string/usuario"></TextView>
+                android:text="@string/usuario_nuevo"
+                android:height="25dp"></TextView>
 
             <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:id="@+id/txt_usuario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:hint="@string/htn_nuevo_usuario"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="30dp"
                 android:height="50dp"
-                android:hint="@string/hint_usuario"></EditText>
-
+                android:layout_marginBottom="30dp"></EditText>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:height="25dp"
-                android:text="@string/contrasenia"></TextView>
-
+                android:text="@string/contrasenia"
+                android:height="25dp"></TextView>
             <EditText
-                android:id="@+id/txt_contra"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/txt_contra"
+                android:hint="@string/hint_contrasenia"
+                android:inputType="textVisiblePassword"
                 android:layout_marginStart="16dp"
                 android:layout_marginEnd="16dp"
-                android:layout_marginBottom="30dp"
                 android:height="50dp"
-                android:hint="@string/hint_contrasenia"
-                android:inputType="textVisiblePassword"></EditText>
-
+                android:layout_marginBottom="30dp"></EditText>
             <Button
-                android:id="@+id/btn_login"
+                android:id="@+id/btn_regUx"
                 android:layout_width="200dp"
                 android:layout_height="match_parent"
                 android:layout_gravity="right"
                 android:layout_marginHorizontal="16dp"
-                android:text="@string/btn_login"></Button>
+                android:onClick="onClick"
+                android:text="@string/reg_ux"></Button>
         </LinearLayout>
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

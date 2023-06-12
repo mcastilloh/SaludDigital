@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">SaludDigital</string>
+    <string name="app_name">Salud Digital</string>
+    <string name="usuario">Usuario</string>
+    <string name="hint_usuario">Digite su usuario</string>
+    <string name="contrasenia">Contraseña</string>
+    <string name="hint_contrasenia">Digite su contraseña</string>
+    <string name="btn_login">Iniciar sesion</string>
+    <string name="btn_reg_us">Registrar Usuario (Camara)</string>
+    <string name="reg_usuarios">Registro de usuarios</string>
+    <string name="usuario_nuevo">Registre nuevo usuario</string>
+    <string name="htn_nuevo_usuario">Digite nombre de usuario</string>
+    <string name="reg_ux">Registrar usuario</string>
+    <string name="foto_perfil">Subir foto de perfil</string>
 </resources>
