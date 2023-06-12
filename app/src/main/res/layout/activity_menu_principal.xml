@@ -25,6 +25,22 @@
                 android:layout_gravity="right"
                 android:layout_marginHorizontal="16dp"
                 android:text="@string/btn_reg_us"></Button>
+
+            <Button
+                android:id="@+id/btn_mapas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginHorizontal="16dp"
+                android:text="@string/btn_mapas"></Button>
+
+            <Button
+                android:id="@+id/btn_recetas"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:layout_marginHorizontal="16dp"
+                android:text="@string/btnRecetas"></Button>
         </LinearLayout>
     </ScrollView>
 

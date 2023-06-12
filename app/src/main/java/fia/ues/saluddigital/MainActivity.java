@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
         txt_nombreUsuario = findViewById(R.id.txt_usuario);
         txtPass = findViewById(R.id.txt_contra);
         btn_iniciar_sesion = findViewById(R.id.btn_login);
+        bdControl.abrir();
+        llenarDatos();
+        bdControl.cerrar();
 
         btn_iniciar_sesion.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -47,5 +50,10 @@ public class MainActivity extends AppCompatActivity {
                 bdControl.cerrar();
             }
         });
+    }
+
+    public void llenarDatos(){
+        Usuario usuario = new Usuario(0,"a","a");
+        bdControl.insertar(usuario);
     }
 }

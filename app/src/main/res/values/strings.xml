@@ -11,4 +11,8 @@
     <string name="htn_nuevo_usuario">Digite nombre de usuario</string>
     <string name="reg_ux">Registrar usuario</string>
     <string name="foto_perfil">Subir foto de perfil</string>
+    <string name="btn_mapas">Ver mapas</string>
+    <string name="btnRecetas">Ver recetas</string>
+
+
 </resources>
