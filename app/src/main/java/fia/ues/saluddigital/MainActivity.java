@@ -48,27 +48,4 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-    /*public void OnClick(View view){
-        bdControl.abrir();
-        switch (view.getId()) {
-            case R.id.btn_login:
-                String u = txt_nombreUsuario.getText().toString();
-                String p = txtPass.getText().toString();
-                if (u.equals("") && p.equals("")) {
-                    Toast.makeText(MainActivity.this, "Error", Toast.LENGTH_SHORT).show();
-                    bdControl.cerrar();
-                } else if (bdControl.login(u, p) == 1) {
-                    Usuario ux = bdControl.getUsuario(u, p);
-                    bdControl.cerrar();
-                    Toast.makeText(MainActivity.this, "Datos Correctos", Toast.LENGTH_SHORT).show();
-                    Intent admin = new Intent(MainActivity.this, Menu_principal.class);
-                    startActivity(admin);
-                }
-                break;
-            default:
-                bdControl.cerrar();
-            break;
-        }
-    }*/
 }
