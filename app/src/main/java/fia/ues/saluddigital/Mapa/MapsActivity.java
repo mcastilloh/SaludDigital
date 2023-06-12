@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentActivity;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
@@ -24,6 +25,7 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
@@ -54,6 +56,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     private ArrayList<Puntos> listaPuntos = new ArrayList<>();
 
+    private FloatingActionButton fab;
+    private TextToSpeech textToSpeech;
+    private String textoSpe ="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,6 +80,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mBottomSheetBehavior1 = BottomSheetBehavior.from(bottomSheet);
         mBottomSheetBehavior1.setPeekHeight(120);
         mBottomSheetBehavior1.setState(BottomSheetBehavior.STATE_COLLAPSED);
+        fab = findViewById(R.id.fab);
 
         mBottomSheetBehavior1.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
@@ -102,6 +108,28 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 }
             }
         });
+
+        //text to speech
+        textToSpeech = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if (status == TextToSpeech.SUCCESS) {
+                    // Text-to-Speech inicializado correctamente
+                    // Configurar el lenguaje de Text-to-Speech, si es necesario
+                } else {
+                    // No se pudo inicializar Text-to-Speech
+                }
+            }
+        });
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String markerTag = textoSpe;
+
+                // Leer el contenido del marcador utilizando Text-to-Speech
+                textToSpeech.speak(markerTag, TextToSpeech.QUEUE_FLUSH, null);
+            }
+        });
     }
 
     @Override
@@ -116,6 +144,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         VolverPosicion(UES);
         // Llamar al web service para obtener los datos
         marcadores();
+
+
 
     }
 
@@ -203,6 +233,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                                         txtHorario.setText(listaPuntos.get(i).getDescripcionLugar());
                                         txtDireccion.setText(listaPuntos.get(i).getDireccion());
                                         loadImageFromUrl(listaPuntos.get(i).getImagenLugar(),imgmarker);
+                                        textoSpe = "";
+                                        textoSpe = listaPuntos.get(i).getNombreLugar();
                                     }
                                     mBottomSheetBehavior1.setState(BottomSheetBehavior.STATE_EXPANDED);
                                 }
